@@ -270,6 +270,12 @@ def gcp_bucket_to_dataset(gcp_bucket_name, file_name, dataset_name, table_name, 
             },
             {"name": "cost_type", "type": "STRING", "mode": "NULLABLE"},
             {
+                "name": "price",
+                "type": "RECORD",
+                "fields": [{"name": "effective_price", "type": "STRING", "mode": "NULLABLE"}],
+                "mode": "NULLABLE",
+            },
+            {
                 "name": "adjustment_info",
                 "type": "RECORD",
                 "fields": [
